@@ -14,7 +14,7 @@
 // Remix with any track.
 // Uploads are supported by the Echo Nest's back-end servers.
 // You're welcome to uses these servers for non-commercial projects and hacks
-var apiKey = 'FILDTEOIK2HBORODV';
+var apiKey = 'TRZJMRXITQGIFF6LK';
 var trackID;
 var trackURL;
 
@@ -41,7 +41,7 @@ function analyzeAudio(audio, tag, callback) {
         } else {
             $("#info").text(data.status + ' - ready in about ' + data.estimated_wait + ' secs. ');
             setTimeout(function() { analyzeAudio(audio, tag, callback); }, 8000);
-        } 
+        }
     });
 }
 
@@ -87,7 +87,7 @@ function init() {
                 });
             }
         });
-    } 
+    }
 
     else if ('trid' in params) {
         // We were passed a trackID directly in the url
@@ -117,7 +117,7 @@ function init() {
                 loadingColor: '#000000',
                 cursorColor: '#888888'
             });
-            
+
             var remixedWavesurfer = Object.create(WaveSurfer);
             remixedWavesurfer.init({
                 canvas: document.querySelector('#RemixedWaveCanvas'),
@@ -167,7 +167,7 @@ function init() {
         });
         urlXHR.error(function() {
             $("#info").text("Error getting the track URL - please try again...");
-        });    
+        });
 
     } else {
         // We're waiting for the user to pick a track and upload it
@@ -175,7 +175,7 @@ function init() {
         $("#redirect-url").attr('value', document.URL);
         $("#f-filename").attr('value', 'remix_audio/' + randomName() + '.mp3');
 
-        $("#file").change( 
+        $("#file").change(
             function() {
                 var filename = $("#file").val();
                 if (endsWith(filename.toLowerCase(), ".mp3")) {
@@ -200,17 +200,17 @@ window.onload = init;
 <div id='select-track'>
     <form action="https://s3.amazonaws.com/static.echonest.com" method="post" enctype="multipart/form-data">
       <input id='f-filename' type="hidden" name="key" value="remix_audio/${filename}">
-      <input id='f-key' type="hidden" name="AWSAccessKeyId" value="YOUR_AWS_ACCESS_KEY"> 
-      <input type="hidden" name="acl" value="public-read"> 
+      <input id='f-key' type="hidden" name="AWSAccessKeyId" value="YOUR_AWS_ACCESS_KEY">
+      <input type="hidden" name="acl" value="public-read">
       <input id='redirect-url' type="hidden" name="success_action_redirect"
           value="YOUR_URL">
       <input id='f-policy' type="hidden" name="policy" value="YOUR_POLICY_DOCUMENT_BASE64_ENCODED">
       <input id='f-signature' type="hidden" name="signature" value="YOUR_CALCULATED_SIGNATURE">
       <input type="hidden" name="Content-Type" value="audio/mpeg">
-      Select an <b>MP3</b> to upload : <input  id="file" name="file" type="file"> 
+      Select an <b>MP3</b> to upload : <input  id="file" name="file" type="file">
       <br>
-      <input class="btn btn-primary btn-default" id='upload' type="submit" value="Upload MP3"> 
-    </form> 
+      <input class="btn btn-primary btn-default" id='upload' type="submit" value="Upload MP3">
+    </form>
 </div>
 </section>
 
@@ -223,5 +223,3 @@ window.onload = init;
 </section>
 </body>
 </html>
-
-
