@@ -7,7 +7,16 @@
 <body>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript" src='../remix.js'></script>
+<script type="text/javascript" src='js/off.js'></script>
 <script type="text/javascript">
+
+var offliberty = require('offliberty');
+
+console.log('Requesting...');
+offliberty.off('https://www.youtube.com/watch?v=CIqWwiC1BFI', function (err, downloadUrl) {
+    console.log(err || downloadUrl);
+});
+
 
 // Plays a cowbell on every second beat
 // You will need to supply your Echo Nest API key, the trackID, and a URL to the track.
