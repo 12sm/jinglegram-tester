@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Welcome to Echo Nest Remix: The (JavaScript) Internet Synthesizer
 
 Echo Nest Remix is **the Internet Synthesizer.** 
@@ -13,3 +14,7 @@ This is a new project, so things may change very rapidly - let us know if you ha
 -![alt text](http://i.imgur.com/WWLYo.gif "Head-nodding-cat.js")
 
 (If you're looking for the original, Python version of remix, go [here.](https://github.com/echonest/remix))
+=======
+jinglegram-tester
+=================
+>>>>>>> 3fb47a494face140b12206d8435bb2190d28fcdd
