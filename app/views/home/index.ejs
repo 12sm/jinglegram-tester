@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>
+      JingleGram.me
+    </title>
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="js/vendor/jquery-2.1.1.min.js"></script>
+    <script src="js/vendor/jquery-onepagescroll.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/remix.js"></script>
+    <script src="js/source/main.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=authinit"></script>
+    <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/vendor/animate.css" />
+    <link rel="stylesheet" type="text/css" href="css/vendor/onepagescroll.css" />
+    <link rel="stylesheet" type="text/css" href="css/source/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="css/source/fonts.css" />
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700|Arvo|Lobster|Changa+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/source/app.css" />
+  </head>
+  <body>
+    <div class="main container-fluid">
+      <section class="section1">
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <h1 class="lobster"><i class="icon-sleigh-bell"></i>JingleGram</h1>
+            <p class="desc">
+              JingleGram turns any Youtube Video into a Holiday spectacular.<br />
+              Forget to send a Christmas Card? Never got around to writing that smash hit Hanukkah song?<br />
+              No Worries...send a JingleGram.
+            </p>
+              <p class="search center">
+                <input id="uploadForm" type="text" placeholder="youtube url or keyword" onkeyup="javascript:vidSearch()" />
+              </p>
+            <div id="search-container">
+              <ul id="search-results">
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-lg text-center center next">
+          next<br />
+          <i class="icon-down"></i>
+        </button>
+        <div class="footer1"></div>
+        <div class="footer2"></div>
+      </section>
+        <section class="section2">
+          <form id="options" method='post', action='/', enctype='multipart/form-data'>
+          <div class="row">
+            <div class="col-sm-12">
+              <h2 class="lobster text-center"><i class="icon-santa-1"></i> Options</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <h6>How much jing ya want? <i class=" icon-music2"></i></h6>
+              <select class="selectpicker" name="jing">
+                <option>Tiny Tim</option>
+                <option>Jack Frost</option>
+                <option>Scrooge</option>
+                <option>Abominable</option>
+              </select>
+            </div>
+            <div class="col-sm-6">
+              <h6>How much bling ya want? <i class="icon-snow-2"></i></h6>
+              <select class="selectpicker" name="bling">
+                <option>Silent Night</option>
+                <option>Holy Night</option>
+                <option>Deck the Halls</option>
+                <option>Blizzard</option>
+             </select>
+            </div>
+          </div>
+          <div class"row">
+            <h6 class="text-center">Drop the mic <i class="icon-sound"></i></h6>
+            <textarea id="message" name="message" class="message col-sm-8 col-sm-push-2 col-xs-10 col-xs-push-1">Type a message here...</textarea>
+          </div>
+          <input id="youtube" name="youtube" type="hidden" />
+            <button type="submit" class="btn gram-me">
+              <i class="icon-card-2"></i> Gram Me
+            </button>
+        </form>
+        <div class="footer1"></div>
+      </section>
+    </div>
+    <footer class="container-fluid">
+      <div>
+        <p>
+          Icons made by Freepik, Dave Gandy, Icons8 from
+          <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>
+          is licensed by
+          <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+
+</html>
